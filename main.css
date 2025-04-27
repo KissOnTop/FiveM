@@ -1,0 +1,228 @@
+/* Reset y Estilos Generales */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #002409;
+    color: #67ff94;
+    line-height: 1.6;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    background-color: #0f0f1f;
+    padding: 1.5rem;
+    text-align: center;
+    border-bottom: 2px solid #67ff94;
+}
+
+nav {
+    margin-top: 1rem;
+}
+
+nav a {
+    color: #67ff94;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 1.1rem;
+    transition: color 0.3s;
+    padding: 5px 10px;
+    border-radius: 4px;
+}
+
+nav a:hover, nav a.active {
+    color: #f72585;
+    background: rgba(76, 201, 240, 0.1);
+}
+
+main {
+    flex: 1;
+    padding: 2rem;
+}
+
+.hero {
+    text-align: center;
+    padding: 4rem 2rem;
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0,0,0,0.7)), url('../assets/images/hero-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    border-radius: 8px;
+    margin-bottom: 2rem;
+}
+
+.hero h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: #006600;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+.btn {
+    display: inline-block;
+    background: linear-gradient(45deg, #062901, #04fc10);
+    color: white;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    text-decoration: none;
+    transition: all 0.3s;
+}
+
+.btn:hover {
+    background: linear-gradient(45deg, #a9e223, #4cc9f0);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 111, 145, 0.4);
+}
+
+/* Estilos para el Footer */
+footer {
+    background-color: #0f0f1f;
+    padding: 1.5rem;
+    text-align: center;
+    border-top: 2px solid #4cc9f0;
+}
+
+.social-links {
+    margin-top: 1rem;
+}
+
+.social-links a {
+    color: #058110;
+    font-size: 1.5rem;
+    margin: 0 10px;
+    transition: color 0.3s;
+}
+
+.social-links a:hover {
+    color: #f72585;
+}
+
+/* Estilos para la Tienda */
+.page-title {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: #4cc9f0;
+    font-size: 2rem;
+    border-bottom: 2px solid #f72585;
+    padding-bottom: 10px;
+    display: inline-block;
+}
+
+.grid-productos {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.producto {
+    background: #252540;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+    border: 1px solid #4cc9f0;
+}
+
+.producto:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(76, 201, 240, 0.2);
+}
+
+.producto img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 4px;
+    margin-bottom: 1rem;
+}
+
+.producto h3 {
+    color: #f72585;
+    margin-bottom: 0.5rem;
+}
+
+.price {
+    color: #4cc9f0;
+    font-weight: bold;
+    font-size: 1.2rem;
+    margin: 10px 0;
+}
+
+/* Estilos para el Formulario */
+.contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 2rem;
+    background: #252540;
+    border-radius: 8px;
+    border: 1px solid #4cc9f0;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 1rem;
+    border: 1px solid #4cc9f0;
+    background: #1a1a2e;
+    color: #fff;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+.contact-form textarea {
+    min-height: 150px;
+    resize: vertical;
+}
+
+.contact-form button {
+    width: 100%;
+    padding: 12px;
+    font-size: 1rem;
+}
+
+/* Estilos para Sobre Nosotros */
+.about-section {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem;
+    background: #252540;
+    border-radius: 8px;
+    border: 1px solid #4cc9f0;
+}
+
+.about-section h3 {
+    color: #00ccff;
+    margin: 1.5rem 0 1rem;
+    font-size: 1.5rem;
+}
+
+.about-section p {
+    margin-bottom: 1rem;
+    line-height: 1.7;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    nav a {
+        display: block;
+        margin: 10px 0;
+    }
+    
+    .grid-productos {
+        grid-template-columns: 1fr;
+    }
+}
